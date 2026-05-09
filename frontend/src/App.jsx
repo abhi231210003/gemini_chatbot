@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import { Send, Plus, Image as ImageIcon, FileText, X, Bot, User, Trash2 } from 'lucide-react';
 
-const API_URL = 'http://localhost:3000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 
 function App() {
   const [chatId, setChatId] = useState(null);
